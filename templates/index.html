@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block header %}
+<h1 class="gray-bg cyan-fg">Manic Indulgence</h1>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+{{ section.content | safe }}
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="content footer gray-bg">
+    <h2 class="cyan-fg">Contact Us</h2>
+    <b>Location</b>
+    <br>
+    Youngstown, OH
+    <br>
+    <b><a href="mailto:manicindulgencestudio@gmail.com">manicindulgencestudio@gmail.com</a></b>
+</div>
+{% endblock %}
