@@ -3,22 +3,34 @@
 {% block title %}{{ section.title }}{% endblock %}
 
 {% block header %}
-<h1 class="gray-bg cyan-fg">Manic Indulgence</h1>
+<h1 class="center medium-size">Manic Indulgence</h2>
 {% endblock %}
 
 {% block content %}
-<div class="content">
+<div class="center gray-bg">
 {{ section.content | safe }}
 </div>
 {% endblock %}
 
+{% block middle %}
+<div class="gallery">
+{% for asset in section.assets -%}
+  {%- if asset is matching("[.](jpg|png)$") -%}
+    {% set image = resize_image(path=asset, width=320, height=240) %}
+    <a href="{{ get_url(path=asset) }}" target="_blank">
+      <img src="{{ image.url }}" />
+    </a>
+  {%- endif %}
+{%- endfor %}
+</div>{% endblock %}
+
 {% block footer %}
-<div class="content footer gray-bg">
-    <h2 class="cyan-fg">Contact Us</h2>
+<div class="footer center gray-bg">
+    <h2 class="medium-size">Contact Us</h2>
     <b>Location</b>
     <br>
     Youngstown, OH
     <br>
-    <b><a href="mailto:manicindulgencestudio@gmail.com">manicindulgencestudio@gmail.com</a></b>
+    <b><a class="cyan-fg" href="mailto:manicindulgencestudio@gmail.com">manicindulgencestudio@gmail.com</a></b>
 </div>
 {% endblock %}

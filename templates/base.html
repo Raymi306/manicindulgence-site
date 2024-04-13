@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="online portfolio of Kayla Latimer">
+  <meta name="description" content="online art portfolio of Kayla Latimer">
+  <meta name="keywords" content="Kayla Latimer, Manic Indulgence, art, painting, Youngstown, artist">
   <link rel="stylesheet" href="/site.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&family=Syncopate">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
@@ -13,12 +14,13 @@
 <body>
   <section class="section">
     <div class="container">
-            {% block header %}
-            <h1>{{ config.title }}</h1>
-            {% endblock %}
 	</div>
-        {% block content %}
-        {% endblock %}
+    {% block header %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% block middle %}
+    {% endblock %}
 	{% block footer %}
 	{% endblock %}
     </div>
