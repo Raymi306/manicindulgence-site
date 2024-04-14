@@ -39,16 +39,16 @@ p {
 }
 
 .medium-size {
+    font-size: 2rem;
+    line-height: :rem;
+}
+
+.large-size {
     font-size: 2.3rem;
     line-height: 2.3rem;
 }
 
-.large-size {
-    font-size: 3rem;
-    line-height: 3rem;
-}
-
-#name {
+#title {
     font-family: Monoton, sans-serif;
     margin-top: 0;
     margin-bottom: 2.5rem;
@@ -92,5 +92,9 @@ a:visited {
     .large-size {
         font-size: 4rem;
         line-height: 4rem;
+    }
+    .medium-size {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
     }
 }
